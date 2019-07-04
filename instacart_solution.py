@@ -3,9 +3,11 @@
 Instacart HW InsightData
 
 """
-
 #%%
 import csv
+import numpy as np
+
+#%%
 j=10
 with open('E:\Saeed\Data Science\Instacart\instacart_2017_05_01\products.csv') as prodcsv:
     products = csv.reader(prodcsv, delimiter=',')
