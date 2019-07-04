@@ -29,13 +29,12 @@ def row_reader(csv_file,row_asked):
         
 #%%  
 
-with open('E:\Saeed\Data Science\Instacart\instacart_2017_05_01\order_products_departments.csv', "w", newline='') as csv_ord_dep,\
-     open('E:\Saeed\Data Science\Instacart\instacart_2017_05_01\products.csv', encoding='utf8') as csv_products,\
+with open('E:\Saeed\Data Science\Instacart\instacart_2017_05_01\products.csv', encoding='utf8') as csv_products,\
      open('E:\Saeed\Data Science\Instacart\instacart_2017_05_01\order_products__train.csv') as csv_orders:
          
     orders = csv.reader(csv_orders, delimiter=',')
     products = csv.reader(csv_products, delimiter=',' )
-    ord_dep = csv.writer(csv_ord_dep)
+    
 #     
     ord_dep.writerow(['department_id', 'add_to_cart_orders', 'number_of_first_orders', 'percentage']) 
 
@@ -66,6 +65,7 @@ with open('E:\Saeed\Data Science\Instacart\instacart_2017_05_01\order_products_d
                  
 csv_ord_dep.close()
 csv_products.close()
+
 #%% sort the array according to depatment number; arr = [dep_id, cart_ords, first_ord]
 arr_sort = arr[arr[:,0].argsort()]      
 print(arr_sort)
