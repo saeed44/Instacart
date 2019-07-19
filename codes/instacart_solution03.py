@@ -43,6 +43,8 @@ with open('E:\Saeed\Data Science\Instacart\instacart_2017_05_01\products.csv', e
     
     #num_orders = 1384617
     num_orders = 10000
+    
+    # determine how many orders to read
     j= num_orders
     arr = np.zeros((num_orders,3),dtype=int)
     for row in orders:
@@ -57,10 +59,6 @@ with open('E:\Saeed\Data Science\Instacart\instacart_2017_05_01\products.csv', e
             if cart_ords > 0:
                 arr[num_orders-j] = [dep_id,cart_ords,first_ord] 
             
-#            new_row.append(row_reader(csv_products,product_id)[3])
-#            print(new_row)
-#            ord_dep.writerow(new_row)
-#            print('j=',100-j)
             j=j-1  
                  
 csv_ord_dep.close()
