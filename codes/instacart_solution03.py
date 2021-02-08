@@ -9,7 +9,7 @@ import numpy as np
 
 #%%  inspect the data 
 j=10
-with open('E:\Saeed\Data Science\Instacart\instacart_2017_05_01\products.csv') as prodcsv:
+with open('..\products.csv') as prodcsv:
     products = csv.reader(prodcsv, delimiter=',')
     for row in products:
         if j>0:
@@ -29,8 +29,8 @@ def row_reader(csv_file,row_asked):
         
 #%%  
 
-with open('E:\Saeed\Data Science\Instacart\instacart_2017_05_01\products.csv', encoding='utf8') as csv_products,\
-     open('E:\Saeed\Data Science\Instacart\instacart_2017_05_01\order_products__train.csv') as csv_orders:
+with open('..\products.csv', encoding='utf8') as csv_products,\
+     open('..\order_products__train.csv') as csv_orders:
          
     orders = csv.reader(csv_orders, delimiter=',')
     products = csv.reader(csv_products, delimiter=',' )
@@ -110,7 +110,7 @@ for index in dep_change_index(arr_sort):
          
 #%% write to the output report.csv                
     
-with open('E:\\Saeed\\Data Science\\Instacart\\instacart_2017_05_01\\report.csv', "w", newline='') as csv_report:
+with open('..\report.csv', "w", newline='') as csv_report:
     
     rep = csv.writer(csv_report)
     
